@@ -150,7 +150,7 @@ module.exports = HandleMsg = async (aruga, message) => {
         case 'menuadmin':
             if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
             if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-            await aruga.sendText(from, menuId.textAdmin())
+            await aruga.sendText(from, menuId.textAdmin(pushname))
             break
         case 'donate':
         case 'donasi':
